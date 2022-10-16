@@ -2,56 +2,53 @@
 
 body{
     margin:0;
-    overflow: hidden;
-}
-
-.container-view {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .container{
-   display: grid;
-   overflow: hidden;
+  background-image: url("img/login-background.png");
+  height: 100vh;
+  background-size: cover;
+  display: grid;
+  overflow: hidden;
 }
-
-
-.login-background{
-    width: 100%;
-    object-fit: contain;
-    grid-column: 1;
-    grid-row: 1;
-}
-
 
 .white-container {
     width: 30%;
+    height:100%-40px;
     max-width: 284px;
-    max-height: calc(100vh - 40px);
     padding: 20px 20px 20px 20px;
     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
     background-color: #ffffff;
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: end;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-self: end;
+ }
+
+ @media screen and (max-width: 900px) {
+  .container {
+    place-items: center;
+ }
+ .white-container {
+  justify-self: center;
+  width: 350px;
+  height: 350px;
+  min-width: 350px;
+  min-height: 350px;
+}
+
  }
 
  .logo-header-ipad {
-   width: 263px;
-   height: 34px;
+   width: 100%-5px;
+   height: 33px;
    margin: 0 17px 26px 0;
-   padding: 1px 5.2px 0 0;
+   padding: 1px 5px 0 0;
  }
 
- .Workflow-Tool {
+ .workflow-tool {
    width: 133px;
-   height: 14px;
-   margin: 1px 84.8px 0px 0;
+   margin-top:1px;
    font-family: 'Roboto';
    font-size: 12px;
    font-weight: normal;
@@ -63,11 +60,8 @@ body{
    float: left;
  }
 
- .Testing-Hub-Manageme {
-   position: relative;
+ .testing-hub-management {
    width: 217.8px;
-   height: 21px;
-   margin: 0px;
    font-family: 'Roboto';
    font-size: 18px;
    font-weight: normal;
@@ -79,20 +73,8 @@ body{
    float: left;
  }
 
- .hp_logo {
-   width: 30px;
-   height: 30px;
-   margin: 1px 10px 2px 0;
-   background-color: #0096d6;
-   font-family: 'Roboto';
-   font-size: 12px;
-   float: left;
- }
-
- .SIGN-IN {
-   width: 64px;
-   height: 21px;
-   margin: 26px 226px 0 0;
+ .sign-in {
+   width: 100%;
    font-family: 'Roboto';
    font-size: 18px;
    font-weight: bold;
@@ -103,30 +85,26 @@ body{
    color: #0096d6;
  }
 
-
  input{
    outline: 0;
-   border-width: 0 0 2px;
+   border-width: 0 0 1px;
    border-color: #b9b9b9;
    width: 100%;
-   height: 26px;
-   margin: 10px 0 0 0.4px;
+   height: 14px;
+   margin: 10px 0 0px 0.4px;
    padding: 6.3px 0px 5.7px 0.1px;
    background-color: #fff;
    font-family: 'Roboto';
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #b9b9b9;
+   font-size: 12px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
  }
 
- .Hint-text-Copy {
-
+ .hint-text{
    width: 100%;
-   height: 14px;
    font-family: 'Roboto';
    font-size: 12px;
    font-weight: normal;
@@ -139,29 +117,25 @@ body{
    justify-content: end;
  }
 
- 
-   .Hint-text-Copy2 {
-    width: 79px;
-  height: 14px;
-  margin: 2px 19px 12px 4.5px;
-  font-family: 'Roboto';
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #5a5a5a;
-    }
-
-    
- .Shape {
-  width: 18px;
-  height: 18px;
-  margin: 0 4.5px 0 0.5px;
-  border: solid 2px #5a5a5a;
+ .flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20.7px;
  }
 
+ .checkbox-hint{
+  justify-content:start;
+  color: #5a5a5a;
+  margin-top: 2px;
+ }
+
+ .shape {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  margin-right: 5px;
+  border: solid 2px #5a5a5a;
+ }
 
   .button-bg {
     width: 100%;
@@ -169,29 +143,22 @@ body{
     margin-top: 30px;
     background-color: #0096d6;
     font-family: 'Roboto';
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #fff;
-  border: 0;
-  display: block;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    border: 0;
   }
 
+  .button-bg:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px , rgba(50, 50, 93, .2) 0 6px 15px 0;
+  }
 
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
- 
-.-Copyright-2018-HP {
-  width: 222px;
-  height: 11px;
-  margin: 0 30px 0 28px;
+.-copyright-2018-HP {
+  width: 100%;
   font-family: 'Roboto';
   font-size: 10px;
   font-weight: normal;
@@ -200,4 +167,6 @@ body{
   line-height: normal;
   letter-spacing: normal;
   color: #5a5a5a;
+  display: inline-flex;
+  justify-content: center;
 }
